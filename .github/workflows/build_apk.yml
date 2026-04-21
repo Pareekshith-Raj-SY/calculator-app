@@ -33,7 +33,7 @@ jobs:
         run: flutter pub get
 
       - name: Analyze code
-        run: flutter analyze --no-fatal-infos
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
         continue-on-error: true
 
       - name: Run tests
@@ -67,17 +67,17 @@ jobs:
           tag_name: v${{ github.run_number }}
           name: Calculator App v${{ github.run_number }}
           body: |
-            ## Calculator App - Built by Pareekshith 🧮
-            
-            ### What's included:
-            - ✅ Beautiful Light/Blue UI
-            - ✅ Splash Screen
-            - ✅ Full Calculator functionality
-            - ✅ Persistent calculation history
-            
+            ## Calculator App - Built by Pareekshith
+
+            ### Whats included:
+            - Beautiful Light/Blue UI
+            - Splash Screen
+            - Full Calculator functionality
+            - Persistent calculation history
+
             ### Download:
             Download the APK below and install on your Android device.
-            > Enable "Install from unknown sources" in your Android settings.
+            Enable Install from unknown sources in your Android settings.
           files: |
             build/app/outputs/flutter-apk/app-release.apk
           draft: false

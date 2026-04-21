@@ -134,7 +134,7 @@ class _CalcButtonState extends State<CalcButton>
       );
     }
     if (widget.label == '÷') {
-      return Icon(Icons.divide, color: _textColor, size: 24);
+      return Text('÷', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600, color: _textColor));
     }
     return Text(
       widget.label,
